@@ -133,27 +133,6 @@ const updateActiveNav = () => {
 
 window.addEventListener('scroll', updateActiveNav);
 
-const cursorGlow = document.querySelector('.cursor-glow');
-
-if (cursorGlow) {
-    document.addEventListener('mousemove', (e) => {
-        cursorGlow.style.left = e.clientX - 10 + 'px';
-        cursorGlow.style.top = e.clientY - 10 + 'px';
-    });
-    
-    // Scale up on hover over interactive elements
-    const interactiveElements = document.querySelectorAll('a, button, .project-card, .skill-card, .contact-card');
-    
-    interactiveElements.forEach(element => {
-        element.addEventListener('mouseenter', () => {
-            cursorGlow.style.transform = 'scale(2.5)';
-        });
-        
-        element.addEventListener('mouseleave', () => {
-            cursorGlow.style.transform = 'scale(1)';
-        });
-    });
-}
 
 
 const projectCards = document.querySelectorAll('.project-card');
